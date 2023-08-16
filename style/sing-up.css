@@ -1,0 +1,20 @@
+form{
+    display: inline-block;
+    margin: 40px 35%;
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: aqua;
+}
+form input{
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    color: dimgray;
+    outline: none;
+    text-transform: capitalize;
+}
+form input::placeholder{
+    outline: none;
+    color: rgba(0, 0, 0, 0.474);
+}

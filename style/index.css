@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: aqua;
+    padding: 10px 5px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+nav ul li a{
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+nav ul li a:hover{
+    color: white;
+}
