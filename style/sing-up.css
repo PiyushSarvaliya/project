@@ -1,15 +1,18 @@
 form{
-    display: inline-block;
-    margin: 40px 35%;
+    width: 350px;
+    height: 320px;
+    margin: 15px auto;
     border: 2px solid #000000;
+    border-radius: 10px;
     text-align: center;
-    padding: 15px 20px;
+    padding: 35px;
     background-color: aqua;
 }
 form input{
     font-size: 20px;
-    padding: 5px 10px;
-    border: 2px solid black;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 25px;
     color: dimgray;
     outline: none;
     text-transform: capitalize;
@@ -17,4 +20,25 @@ form input{
 form input::placeholder{
     outline: none;
     color: rgba(0, 0, 0, 0.474);
+}
+form p{
+    color: red;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#submit{
+    padding: 5px 25px;
+    border-radius: 25px;
+    background-color:transparent;
+    color: black;
+    font-weight: 600;
+    border:2px solid black;
+    transition: all 0.5s;
+}
+#submit:hover{
+    background-color: black;
+    color: white;
 }

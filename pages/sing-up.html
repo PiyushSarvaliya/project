@@ -19,14 +19,18 @@
             </ul>
         </nav>
     </header>
-    <form>
-        <input type="text" placeholder="Enter your name">
-        <br><br>
-        <input type="email" placeholder="Enter your mail">
-        <br><br>
-        <input type="password" placeholder="Enter your password">
-        <br><br>
-        <input type="submit" value="submit">
+    <form id="form">
+        <input type="text" placeholder="Enter your name" id="name">
+        <p id="n_err"></p>
+        <br>
+        <input type="email" placeholder="Enter your mail" id="email">
+        <p id="e_err"></p>
+        <br>
+        <input type="text" placeholder="Enter your password" id="password">
+        <p id="p_err"></p>
+        <br>
+        <input type="submit" value="submit" id="submit">
     </form>
 </body>
+<script src="/javascript/singup.js"></script>
 </html>
