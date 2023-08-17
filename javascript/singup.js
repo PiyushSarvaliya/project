@@ -1,16 +1,29 @@
 const singup = (e) => {
-    e.preventDefault();
+    e.preventdefault();
+
     let user = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      password: document.getElementById("password").value
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
     };
-    fetch("http://localhost:3000/user")
-    .then((res)=>res.json)
-    .then((data)=>console.log(data.user))
-    if(data > 0){
-    }
-   
+
+    fetch(` http://localhost:3000/user?email=${user.email}`)
+    .then((res) => res.json())
+    .then((data)=> {
+      if(data.length > 0){
+        alert("user already exists")
+        setTimeout(
+          window.location.href="./pages/login.html"
+        ,2000);
+      }
+      else{
+        fetch("http://localhost:3000/user",{
+          method: "POST",
+          headers: {'content-type': 'application/json'},
+          body: JSON.stringify(user)
+        })
+      }
+    })
 }
 
 document.getElementById("form").addEventListener("submit", singup)
