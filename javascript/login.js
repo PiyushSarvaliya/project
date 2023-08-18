@@ -1,3 +1,6 @@
+import navbar from "../components/nav.js";
+document.getElementById("navbar").innerHTML = navbar()
+
 const login = (e) => {
     e.preventDefault();
     let user = {

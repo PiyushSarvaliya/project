@@ -1,3 +1,6 @@
+import navbar from "../components/nav.js";
+document.getElementById("navbar").innerHTML = navbar();
+
 const singup = (e) => {
     e.preventdefault();
 
