@@ -12,7 +12,7 @@ const login = (e) => {
     .then((data)=> {
       if(data.length > 0){
         if(data[0].password===user.password){
-            alert("login succes full")
+            alert("login succesfull")
         }
         else{
             alert("enter the correct password")

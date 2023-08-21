@@ -10,7 +10,7 @@ const singup = (e) => {
         password: document.getElementById("password").value
     };
 
-    fetch(` http://localhost:3000/user?email=${user.email}`)
+    fetch(`http://localhost:3000/user?email=${user.email}`)
     .then((res) => res.json())
     .then((data)=> {
       if(data.length > 0){
