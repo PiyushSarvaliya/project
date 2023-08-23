@@ -1,10 +1,8 @@
 import navbar from "../components/nav.js";
 document.getElementById("navbar").innerHTML = navbar();
 
-let products = [];
-
-const display = (product)=>{
-    product.map((product) =>{
+const display = (products)=>{
+    products.map((product) =>{
         let img = document.createElement("img")
         img.src = product.image;
         let title = document.createElement("h3")
@@ -19,11 +17,8 @@ const display = (product)=>{
 
 const get = () =>{
     fetch("http://localhost:3000/product")
-    .then((res)=>(res.json))
-    .then((data)=>{
-        data.display
-        products.push(display)
-    })
+    .then((res)=>res.json())
+    .then((data)=>display(data))
 }
 
 get();

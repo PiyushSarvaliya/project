@@ -1,5 +1,12 @@
 {
-  "user": [],
+  "users": [
+    {
+      "name": "piyush sarvaliya",
+      "email": "sarvaliyapiyush@gmail.com",
+      "pass": "piyush22@@",
+      "id": 1
+    }
+  ],
   "product": [
     {
       "id": 1,

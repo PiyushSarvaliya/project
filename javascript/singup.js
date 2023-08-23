@@ -1,35 +1,37 @@
 import navbar from "../components/nav.js";
 document.getElementById("navbar").innerHTML = navbar();
 
+console.log("strating")
+
 const singup = (e) => {
-    e.preventdefault();
+    e.preventDefault();
 
     let user = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        pass : document.getElementById("password").value
     };
 
-    fetch(`http://localhost:3000/user?email=${user.email}`)
-    .then((res) => res.json())
-    .then((data)=> {
-      if(data.length > 0){
-        alert("user already exists")
-        setTimeout(
-          window.location.href="./pages/login.html"
-        ,2000);
-      }
-      else{
-        fetch("http://localhost:3000/user",{
-          method: "POST",
-          headers: {'content-type': 'application/json'},
-          body: JSON.stringify(user)
-        })
-      }
+    fetch(`http://localhost:3000/users?email=${user.email}`)
+    .then((res)=>res.json())
+    .then((data)=>{
+        if(data > 0){
+            alert("user is already exist")
+            setTimeout(
+                window.location.href = '/pages/login.html'
+            , 1000);
+        }
+        else{
+            fetch("http://localhost:3000/users",{
+                method : "POST",
+                headers : {'content-type' : 'application/json'},
+                body : JSON.stringify(user)
+            })
+        }
     })
 }
 
-document.getElementById("form").addEventListener("submit", singup)
+document.getElementById("form").addEventListener("submit",singup)
 
 document.getElementById("name").addEventListener("keypress", () => {
     let name = document.getElementById("name").value
