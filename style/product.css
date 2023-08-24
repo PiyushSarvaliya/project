@@ -1,0 +1,8 @@
+#ui{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#ui div img{
+    width: 100px;
+    height: 100px;
+}

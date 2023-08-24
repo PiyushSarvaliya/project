@@ -22,6 +22,10 @@ const singup = (e) => {
             , 1000);
         }
         else{
+            localStorage.setItem("login",true)
+            setTimeout(
+                window.location.href = "/index.html"
+            )
             fetch("http://localhost:3000/users",{
                 method : "POST",
                 headers : {'content-type' : 'application/json'},
